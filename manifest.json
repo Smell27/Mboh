@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Nekopoi",
+  "version": "1.0",
+  "description": "https://nekopoi.care",
+  "permissions": [
+    "https://nekopoi.care*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://nekopoi.care*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon-48.png"
+  }
+}
